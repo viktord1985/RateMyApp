@@ -212,6 +212,7 @@ class _RateMyAppStarDialogState extends State<RateMyAppStarDialog> {
       shape: widget.dialogStyle.dialogShape,
       actions: (widget.actionsBuilder ?? widget._defaultOnRatingChanged)(context, currentRating),
       actionsOverflowDirection: VerticalDirection.down,
+      actionsOverflowButtonSpacing: 8,
     );
   }
 
