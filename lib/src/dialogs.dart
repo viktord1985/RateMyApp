@@ -90,6 +90,8 @@ class RateMyAppDialog extends StatelessWidget {
       contentPadding: dialogStyle.contentPadding,
       shape: dialogStyle.dialogShape,
       actions: (actionsBuilder ?? _defaultActionsBuilder)(context),
+      actionsOverflowDirection: VerticalDirection.down,
+      actionsOverflowButtonSpacing: 8,
     );
   }
 
@@ -211,8 +213,6 @@ class _RateMyAppStarDialogState extends State<RateMyAppStarDialog> {
       contentPadding: widget.dialogStyle.contentPadding,
       shape: widget.dialogStyle.dialogShape,
       actions: (widget.actionsBuilder ?? widget._defaultOnRatingChanged)(context, currentRating),
-      actionsOverflowDirection: VerticalDirection.down,
-      actionsOverflowButtonSpacing: 8,
     );
   }
 
