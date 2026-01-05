@@ -78,14 +78,14 @@ class RateMyAppDialog extends StatelessWidget {
     );
 
     return AlertDialog(
-      title: Padding(
-        padding: dialogStyle.titlePadding,
-        child: Text(
-          title,
-          style: dialogStyle.titleStyle,
-          textAlign: dialogStyle.titleAlign,
-        ),
-      ),
+      // title: Padding(
+      //   padding: dialogStyle.titlePadding,
+      //   child: Text(
+      //     title,
+      //     style: dialogStyle.titleStyle,
+      //     textAlign: dialogStyle.titleAlign,
+      //   ),
+      // ),
       content: contentBuilder(context, content),
       contentPadding: dialogStyle.contentPadding,
       shape: dialogStyle.dialogShape,
