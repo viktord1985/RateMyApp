@@ -312,6 +312,8 @@ abstract class _RateMyAppDialogButton extends StatelessWidget {
   /// The button text.
   final String text;
 
+  final TextStyle? textStyle;
+
   /// The state validator (whether this button should have an effect).
   final Validator? validator;
 
@@ -323,6 +325,7 @@ abstract class _RateMyAppDialogButton extends StatelessWidget {
     this.rateMyApp, {
     super.key,
     required this.text,
+    this.textStyle,
     this.validator = _validatorTrue,
     this.callback,
   });
@@ -339,7 +342,7 @@ abstract class _RateMyAppDialogButton extends StatelessWidget {
             callback!();
           }
         },
-        child: Text(text),
+        child: Text(text, style: textStyle),
       );
 
   /// Triggered when a button has been clicked.
@@ -356,6 +359,7 @@ class RateMyAppRateButton extends _RateMyAppDialogButton {
     super.rateMyApp, {
     super.key,
     required super.text,
+    super.textStyle,
     super.validator = null,
     super.callback,
   });
@@ -377,6 +381,7 @@ class RateMyAppLaterButton extends _RateMyAppDialogButton {
     super.rateMyApp, {
     super.key,
     required super.text,
+    super.textStyle,
     super.validator = null,
     super.callback,
   });
@@ -397,6 +402,7 @@ class RateMyAppNoButton extends _RateMyAppDialogButton {
     super.rateMyApp, {
     super.key,
     required super.text,
+    super.textStyle,
     super.validator = null,
     super.callback,
   });
